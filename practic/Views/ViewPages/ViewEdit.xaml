@@ -1,0 +1,70 @@
+﻿<Page x:Class="practic.Views.ViewPages.ViewEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:practic.Views.ViewPages"
+      mc:Ignorable="d" 
+      Name="page"
+      
+    
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ViewEdit">
+    
+    <StackPanel   Margin="0,0,0,0">
+        <StackPanel.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="Red" Offset="2.2"/>
+                <GradientStop Color="Blue" Offset="1.1"/>
+                <GradientStop Color="Green" Offset="0.1"/>
+            </LinearGradientBrush>
+        </StackPanel.Background>
+        <StackPanel Margin="0,50,0,0"  Height="30" Width="300" Orientation="Horizontal" Background="Transparent">
+            <Label Width="70" Content="id"/>
+            <TextBox BorderThickness="2" BorderBrush="Red" Background="Transparent" Text="{Binding user.id, UpdateSourceTrigger=PropertyChanged}" Width="210" Margin="10,0,0,0"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="300" Orientation="Horizontal" Background="Transparent">
+            <Label Width="70" Content="name"/>
+            <TextBox BorderThickness="2" BorderBrush="Red" Background="Transparent" Width="210" Margin="10,0,0,0" Text="{Binding user.name , UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="300" Orientation="Horizontal" Background="Transparent">
+            <Label Width="70" Content="username"/>
+            <TextBox BorderThickness="2" BorderBrush="Red" Background="Transparent" Text="{Binding user.username,  UpdateSourceTrigger=PropertyChanged}" Width="210" Margin="10,0,0,0"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="300" Orientation="Horizontal" Background="Transparent">
+            <Label Width="70" Content="email"/>
+            <TextBox BorderThickness="2" BorderBrush="Red" Background="Transparent" Text="{Binding user.email , UpdateSourceTrigger=PropertyChanged}" Width="210" Margin="10,0,0,0"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="300" Orientation="Horizontal" Background="Transparent">
+            <Label Width="70" Content="street"/>
+            <TextBox BorderThickness="2" BorderBrush="Red" Background="Transparent" Text="{Binding user.address.street, UpdateSourceTrigger=PropertyChanged}" Width="210" Margin="10,0,0,0"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="300" Orientation="Horizontal" Background="Transparent">
+            <Label Width="70" Content="city"/>
+            <TextBox BorderThickness="2" BorderBrush="Red" Background="Transparent" Width="210" Margin="10,0,0,0" Text="{Binding user.address.city, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="300" Orientation="Horizontal" Background="Transparent">
+            <Label Width="70" Content="website"/>
+            <TextBox BorderThickness="2" BorderBrush="Red" Background="Transparent" Width="210" Margin="10,0,0,0" Text="{Binding user.website, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="300" Orientation="Horizontal" Background="Transparent">
+            <Label Width="70" Content="name"/>
+            <TextBox BorderThickness="2" BorderBrush="Red" Background="Transparent" Width="210" Margin="10,0,0,0" Text="{Binding user.company.name, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="300" Orientation="Horizontal" Background="Transparent">
+            <Label Width="70" Content="bs"/>
+            <TextBox  BorderThickness="2" BorderBrush="Red" Background="Transparent"  Width="210" Margin="10,0,0,0" Text="{Binding user.company.bs, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+
+        <Button Command="{Binding EditCommand, UpdateSourceTrigger=PropertyChanged}" CommandParameter="{Binding ElementName=page}"  Content="edit" Height="30" Width="50" Margin="0,20,0,0">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="Red" Offset="1.2"/>
+                    <GradientStop Color="Gold" Offset="0.012"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
+    </StackPanel>
+</Page>

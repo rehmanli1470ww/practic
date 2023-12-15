@@ -1,0 +1,17 @@
+[
+  {
+    "id": 3,
+    "name": "asdasd",
+    "username": "sdas",
+    "email": "dasda",
+    "address": {
+      "street": "sada",
+      "city": "sdas"
+    },
+    "website": "dasdas",
+    "company": {
+      "name": "as",
+      "bs": "asd"
+    }
+  }
+]
